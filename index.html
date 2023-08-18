@@ -572,7 +572,16 @@
 "ftd#nbsp": "&nbsp;",
 "ftd#non-breaking-space": "&nbsp;",
 "ftd#space": " ",
-"ftd#system-dark-mode": false
+"ftd#system-dark-mode": false,
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1-url:0": "index.html",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1:0": "Home",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2-url:0": "index.html",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2:0": "Previous IAO Events",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3-url:0": "index.html",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3:0": "Press",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4-url:0": "index.html",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4:0": "Bengaluru Architecture Open",
+"sarvom.github.io/india-arch-open/lib#navbar-desktop:title:0": "India Architecture Open"
 }
 </script>
 <script type="ftd" id="ftd-external-children">
@@ -590,7 +599,7 @@
 </head>
 <body style="height: 100%; margin: 0;">
 
-<div data-id="main" style="height: 100%; width: 100%" class="ft_common ft_column"><div data-id="0:main" style="" class="ft_common ft_md">Hello World</div></div>
+<div data-id="main" style="height: 100%; width: 100%" class="ft_common ft_column"><div data-id="0:main" style="background-color: rgba(0,0,0,1); gap: 0; height: fit-content; justify-content: space-around; padding-bottom: 16px; padding-left: 8px; padding-right: 8px; padding-top: 16px; width: 100%" class="ft_common ft_row"><div data-id="0,0:main" style="color: rgba(255,255,255,1); font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px" class="ft_common ft_md">India Architecture Open</div><div data-id="0,1:main" style="gap: 16px" class="ft_common ft_row"><a data-id="0,1,0:main" href="index.html" style="color: rgba(255,255,255,1); font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px" class="ft_common ft_md">Home</a><a data-id="0,1,1:main" href="index.html" style="color: rgba(255,255,255,1); font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px" class="ft_common ft_md">Previous IAO Events</a><a data-id="0,1,2:main" href="index.html" style="color: rgba(255,255,255,1); font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px" class="ft_common ft_md">Press</a><a data-id="0,1,3:main" href="index.html" style="color: rgba(255,255,255,1); font-family: sans-serif; font-size: 12px; font-weight: 400; line-height: 16px" class="ft_common ft_md">Bengaluru Architecture Open</a></div></div></div>
 
 <script src="default-1658FA10DBCAC18203B086469F1F0DB9A2FE592C98D1DA93A39718C63E1A0B09.js"></script>
 <script>
@@ -709,7 +718,365 @@ a.value = v
 }
 
 
+window.node_change_main = {};
+window.node_change_main["0,0:main__text"] = function(data) {
+document.querySelector(`[data-id="0,0:main"]`).innerHTML = resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:title:0", data);
+}
 
+window.node_change_main["0,0:main__font-family"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,0:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,0:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,0:main__font-size"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,0:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,0:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,0:main__font-weight"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,0:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,0:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,0:main__letter-spacing"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,0:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,0:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,0:main__line-height"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,0:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,0:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+window.node_change_main["0,1,0:main__text"] = function(data) {
+document.querySelector(`[data-id="0,1,0:main"]`).innerHTML = resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1:0", data);
+}
+
+window.node_change_main["0,1,0:main__href"] = function(data) {
+document.querySelector(`[data-id="0,1,0:main"]`).setAttribute("href", resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1-url:0", data));
+
+if (document.querySelector(`[data-id="0,1,0:main"]`).getAttribute("href") == "REMOVE-KEY"){
+document.querySelector(`[data-id="0,1,0:main"]`).removeAttribute("href");
+}
+}
+
+window.node_change_main["0,1,0:main__font-family"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,0:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,0:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,0:main__font-size"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,0:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,0:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,0:main__font-weight"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,0:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,0:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,0:main__letter-spacing"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,0:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,0:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,0:main__line-height"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,0:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,0:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+window.node_change_main["0,1,1:main__text"] = function(data) {
+document.querySelector(`[data-id="0,1,1:main"]`).innerHTML = resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2:0", data);
+}
+
+window.node_change_main["0,1,1:main__href"] = function(data) {
+document.querySelector(`[data-id="0,1,1:main"]`).setAttribute("href", resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2-url:0", data));
+
+if (document.querySelector(`[data-id="0,1,1:main"]`).getAttribute("href") == "REMOVE-KEY"){
+document.querySelector(`[data-id="0,1,1:main"]`).removeAttribute("href");
+}
+}
+
+window.node_change_main["0,1,1:main__font-family"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,1:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,1:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,1:main__font-size"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,1:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,1:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,1:main__font-weight"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,1:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,1:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,1:main__letter-spacing"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,1:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,1:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,1:main__line-height"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,1:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,1:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+window.node_change_main["0,1,2:main__text"] = function(data) {
+document.querySelector(`[data-id="0,1,2:main"]`).innerHTML = resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3:0", data);
+}
+
+window.node_change_main["0,1,2:main__href"] = function(data) {
+document.querySelector(`[data-id="0,1,2:main"]`).setAttribute("href", resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3-url:0", data));
+
+if (document.querySelector(`[data-id="0,1,2:main"]`).getAttribute("href") == "REMOVE-KEY"){
+document.querySelector(`[data-id="0,1,2:main"]`).removeAttribute("href");
+}
+}
+
+window.node_change_main["0,1,2:main__font-family"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,2:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,2:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,2:main__font-size"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,2:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,2:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,2:main__font-weight"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,2:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,2:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,2:main__letter-spacing"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,2:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,2:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,2:main__line-height"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,2:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,2:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+window.node_change_main["0,1,3:main__text"] = function(data) {
+document.querySelector(`[data-id="0,1,3:main"]`).innerHTML = resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4:0", data);
+}
+
+window.node_change_main["0,1,3:main__href"] = function(data) {
+document.querySelector(`[data-id="0,1,3:main"]`).setAttribute("href", resolve_reference("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4-url:0", data));
+
+if (document.querySelector(`[data-id="0,1,3:main"]`).getAttribute("href") == "REMOVE-KEY"){
+document.querySelector(`[data-id="0,1,3:main"]`).removeAttribute("href");
+}
+}
+
+window.node_change_main["0,1,3:main__font-family"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,3:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,3:main"]`).style["font-family"] = eval(`({0})["font-family"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,3:main__font-size"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,3:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,3:main"]`).style["font-size"] = eval(`({0})["size"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,3:main__font-weight"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,3:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,3:main"]`).style["font-weight"] = eval(`({0}).weight`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,3:main__letter-spacing"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,3:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,3:main"]`).style["letter-spacing"] = eval(`({0})["letter-spacing"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+
+window.node_change_main["0,1,3:main__line-height"] = function(data) {
+if(data["ftd#device"] == "desktop"){
+document.querySelector(`[data-id="0,1,3:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).desktop)));
+}
+else {document.querySelector(`[data-id="0,1,3:main"]`).style["line-height"] = eval(`({0})["line-height"]`.format(JSON.stringify(resolve_reference("ftd#default-types.label-small", data).mobile)));}
+}
+window.set_value_main = {};
+window.set_value_main["ftd#default-types"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "ftd#default-types", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("ftd#default-types", "main");
+window.ftd.call_immutable_value_changes("ftd#default-types", "main");
+window.ftd.utils.node_change_call("main","0,1,3:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,0:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,0:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,0:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,0:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,0:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__font-size", data);
+};
+
+window.set_value_main["ftd#device"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "ftd#device", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("ftd#device", "main");
+window.ftd.call_immutable_value_changes("ftd#device", "main");
+window.ftd.utils.node_change_call("main","0,1,3:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,0:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,0:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,0:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,0:main__line-height", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,0:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,0:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__letter-spacing", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__font-weight", data);
+window.ftd.utils.node_change_call("main","0,1,2:main__font-size", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,1,1:main__font-family", data);
+window.ftd.utils.node_change_call("main","0,1,3:main__letter-spacing", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1-url:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1-url:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1-url:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1-url:0", "main");
+window.ftd.utils.node_change_call("main","0,1,0:main__href", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-1:0", "main");
+window.ftd.utils.node_change_call("main","0,1,0:main__text", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2-url:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2-url:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2-url:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2-url:0", "main");
+window.ftd.utils.node_change_call("main","0,1,1:main__href", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-2:0", "main");
+window.ftd.utils.node_change_call("main","0,1,1:main__text", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3-url:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3-url:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3-url:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3-url:0", "main");
+window.ftd.utils.node_change_call("main","0,1,2:main__href", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-3:0", "main");
+window.ftd.utils.node_change_call("main","0,1,2:main__text", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4-url:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4-url:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4-url:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4-url:0", "main");
+window.ftd.utils.node_change_call("main","0,1,3:main__href", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:cta-text-4:0", "main");
+window.ftd.utils.node_change_call("main","0,1,3:main__text", data);
+};
+
+window.set_value_main["sarvom.github.io/india-arch-open/lib#navbar-desktop:title:0"] = function (data, new_value, remaining) {
+window.ftd.utils.set_value_helper(data, "sarvom.github.io/india-arch-open/lib#navbar-desktop:title:0", remaining, new_value);
+
+window.ftd.call_mutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:title:0", "main");
+window.ftd.call_immutable_value_changes("sarvom.github.io/india-arch-open/lib#navbar-desktop:title:0", "main");
+window.ftd.utils.node_change_call("main","0,0:main__text", data);
+};
 
 
 

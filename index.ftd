@@ -1,1 +1,11 @@
--- ftd.text: Hello World
+-- import: sarvom.github.io/india-arch-open/lib
+
+-- lib.navbar-desktop: India Architecture Open
+cta-text-1: Home
+cta-text-1-url: index.html
+cta-text-2: Previous IAO Events
+cta-text-2-url: index.html
+cta-text-3: Press
+cta-text-3-url: index.html
+cta-text-4: Bengaluru Architecture Open
+cta-text-4-url: index.html
