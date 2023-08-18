@@ -1,0 +1,108 @@
+-- component navbar:
+caption title:
+string cta-text-1:
+string cta-text-1-url:
+string cta-text-2:
+string cta-text-2-url:
+string cta-text-3:
+string cta-text-3-url:
+string cta-text-4:
+string cta-text-4-url:
+
+-- ftd.row:
+
+-- end: ftd.row
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+-- component navbar-mobile:
+caption title:
+string cta-text-1:
+string cta-text-1-url:
+string cta-text-2:
+string cta-text-2-url:
+string cta-text-3:
+string cta-text-3-url:
+string cta-text-4:
+string cta-text-4-url:
+
+-- ftd.row:
+
+-- end: ftd.row
+
+
+-- end: navbar-mobile
+
+
+
+
+
+
+
+
+
+-- component navbar-desktop:
+caption title:
+string cta-text-1:
+string cta-text-1-url:
+string cta-text-2:
+string cta-text-2-url:
+string cta-text-3:
+string cta-text-3-url:
+string cta-text-4:
+string cta-text-4-url:
+
+-- ftd.row:
+background.solid: #000000
+width: fill-container
+height: hug-content
+padding-vertical.px: 16
+padding-horizontal.px: 8
+spacing: space-around
+
+-- ftd.text: $navbar-desktop.title
+color: #ffffff
+role: $inherited.types.label-small
+
+
+-- ftd.row:
+spacing.fixed.px: 16
+
+-- ftd.text: $navbar-desktop.cta-text-1
+link: $navbar-desktop.cta-text-1-url
+color: #ffffff
+role: $inherited.types.label-small
+
+
+-- ftd.text: $navbar-desktop.cta-text-2
+link: $navbar-desktop.cta-text-2-url
+color: #ffffff
+role: $inherited.types.label-small
+
+
+-- ftd.text: $navbar-desktop.cta-text-3
+link: $navbar-desktop.cta-text-3-url
+color: #ffffff
+role: $inherited.types.label-small
+
+
+-- ftd.text: $navbar-desktop.cta-text-4
+link: $navbar-desktop.cta-text-4-url
+color: #ffffff
+role: $inherited.types.label-small
+
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+
+-- end: navbar-desktop
