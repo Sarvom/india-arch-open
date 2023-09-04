@@ -1,6 +1,8 @@
 -- import: sarvom.github.io/india-arch-open/lib
 
--- lib.navbar-desktop: India Architecture Open
+-- lib.page:
+
+-- lib.navbar: India Architecture Open
 cta-text-1: Home
 cta-text-1-url: index.html
 cta-text-2: Previous IAO Events
@@ -9,3 +11,52 @@ cta-text-3: Press
 cta-text-3-url: index.html
 cta-text-4: Bengaluru Architecture Open
 cta-text-4-url: index.html
+
+-- lib.hero: 
+pic: $assets.files.assets.hero-image.webp
+
+-- lib.hero-content: SHOWCASING OUTSTANDING CONTEMPORARY DESIGN
+
+
+-- lib.content-q-a: What is the India Architecture Open?
+
+The India Architecture Open is a platform for - open house format - public design events 
+that aims to showcase outstanding contemporary architecture, interior, landscape and urban 
+design across multiple Indian cities. 
+
+-- lib.content-q-a: Who can attend?
+
+All sections of the community are encouraged to participate in these events. Under this 
+initiative design curious individuals can sign up to explore and understand the value of 
+a well-designed built environment. 
+
+-- lib.content-q-a: What can you expect?
+
+The participants would have an opportunity to get a guided tour of a project and the 
+possibility to engage with architect/designer/client in a meet and greet at the site. We 
+hope these events will lead to interesting discussions about the state of architecture in 
+our cities.
+
+-- end: lib.hero-content
+
+-- lib.section-heading: Events
+
+-- lib.event-section: Bengaluru Architecture Open
+text: 29th & 30th July 2023
+pic: $assets.files.assets.image-1.webp
+button: Click HERE to know more
+button-url: index.html
+
+Join us a we explore seven recently completed architecture & landscape projects across 
+Bengaluru.
+
+-- lib.event-section: Previous India Architecture Open Events
+text: 2018 / 2019 / 2020
+pic: $assets.files.assets.image-2.webp
+button: Click HERE to know more
+button-url: index.html
+
+Over the past few years we have successfully organised these events in various cities 
+across in India.
+
+-- end: lib.page

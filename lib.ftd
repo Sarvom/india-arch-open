@@ -1,3 +1,22 @@
+-- component page:
+children c:
+
+-- ftd.column:
+width: fill-container
+types: $roboto-typography.types
+;;colors: $fastn-cs-tail.main
+
+-- ftd.column:
+width: fill-container
+children: $page.c
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
+
+
 -- component navbar:
 caption title:
 string cta-text-1:
@@ -10,6 +29,31 @@ string cta-text-4:
 string cta-text-4-url:
 
 -- ftd.row:
+width: fill-container
+
+-- navbar-mobile:
+if: { ftd.device == "mobile" }
+title: $navbar.title
+cta-text-1: $navbar.cta-text-1
+cta-text-1-url: $navbar.cta-text-1-url
+cta-text-2: $navbar.cta-text-2
+cta-text-2-url: $navbar.cta-text-2-url
+cta-text-3: $navbar.cta-text-3
+cta-text-3-url: $navbar.cta-text-3-url
+cta-text-4: $navbar.cta-text-4
+cta-text-4-url: $navbar.cta-text-4-url
+
+-- navbar-desktop:
+if: { ftd.device == "desktop" }
+title: $navbar.title
+cta-text-1: $navbar.cta-text-1
+cta-text-1-url: $navbar.cta-text-1-url
+cta-text-2: $navbar.cta-text-2
+cta-text-2-url: $navbar.cta-text-2-url
+cta-text-3: $navbar.cta-text-3
+cta-text-3-url: $navbar.cta-text-3-url
+cta-text-4: $navbar.cta-text-4
+cta-text-4-url: $navbar.cta-text-4-url 
 
 -- end: ftd.row
 
@@ -33,11 +77,69 @@ string cta-text-3:
 string cta-text-3-url:
 string cta-text-4:
 string cta-text-4-url:
+ftd.image-src menu: $assets.files.assets.menu.png
+ftd.image-src close: $assets.files.assets.close.png
+boolean $open: false
+
+
+-- ftd.column:
+width: fill-container
+background.solid: #000000
+
 
 -- ftd.row:
+width: fill-container
+padding-vertical.px: 16
+padding-horizontal.px: 8
+spacing: space-around
+
+-- ftd.text: $navbar-mobile.title
+color: #ffffff
+role: $inherited.types.heading-small
+
+-- ftd.image:
+if: { !navbar-mobile.open }
+height.fixed.px: 32
+src: $navbar-mobile.menu
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
+
+-- ftd.image:
+if: { navbar-mobile.open }
+height.fixed.px: 32
+src: $navbar-mobile.close
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 -- end: ftd.row
 
+-- ftd.column:
+if: { navbar-mobile.open }
+width: fill-container
+align-content: center
+spacing.fixed.px: 16
+
+-- ftd.text: $navbar-mobile.cta-text-1
+link: $navbar-mobile.cta-text-1-url
+color: #ffffff
+role: $inherited.types.label-small
+
+-- ftd.text: $navbar-mobile.cta-text-2
+link: $navbar-mobile.cta-text-2-url
+color: #ffffff
+role: $inherited.types.label-small
+
+-- ftd.text: $navbar-mobile.cta-text-3
+link: $navbar-mobile.cta-text-3-url
+color: #ffffff
+role: $inherited.types.label-small
+
+-- ftd.text: $navbar-mobile.cta-text-4
+link: $navbar-mobile.cta-text-4-url
+color: #ffffff
+role: $inherited.types.label-small
+
+-- end: ftd.column
+
+-- end: ftd.column
 
 -- end: navbar-mobile
 
@@ -64,45 +166,239 @@ string cta-text-4-url:
 background.solid: #000000
 width: fill-container
 height: hug-content
-padding-vertical.px: 16
-padding-horizontal.px: 8
-spacing: space-around
+padding-vertical.px: 32
+padding-horizontal.percent: 5
+spacing: space-between
 
 -- ftd.text: $navbar-desktop.title
 color: #ffffff
-role: $inherited.types.label-small
-
+role: $inherited.types.heading-small
 
 -- ftd.row:
-spacing.fixed.px: 16
+spacing.fixed.px: 24
+align-self: center
 
 -- ftd.text: $navbar-desktop.cta-text-1
 link: $navbar-desktop.cta-text-1-url
 color: #ffffff
 role: $inherited.types.label-small
 
-
 -- ftd.text: $navbar-desktop.cta-text-2
 link: $navbar-desktop.cta-text-2-url
 color: #ffffff
 role: $inherited.types.label-small
-
 
 -- ftd.text: $navbar-desktop.cta-text-3
 link: $navbar-desktop.cta-text-3-url
 color: #ffffff
 role: $inherited.types.label-small
 
-
 -- ftd.text: $navbar-desktop.cta-text-4
 link: $navbar-desktop.cta-text-4-url
 color: #ffffff
 role: $inherited.types.label-small
 
-
 -- end: ftd.row
 
 -- end: ftd.row
-
 
 -- end: navbar-desktop
+
+
+
+
+
+
+
+
+
+
+-- component hero:
+ftd.image-src pic:
+
+-- ftd.column: 
+width: fill-container
+margin-top.px: 64
+border-width.percent: 20
+border-color: #ffffff
+
+-- ftd.image:
+src: $hero.pic
+;;width: fill-container
+align-self: center
+
+-- end: ftd.column
+
+-- end: hero
+
+
+
+
+
+
+
+
+
+
+-- component hero-content:
+caption title:
+children content:
+optional body body: 
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-vertical.px: 96
+
+-- ftd.text: $hero-content.title
+role: $inherited.types.heading-small
+
+-- ftd.column:
+margin-horizontal.px: 200
+children: $hero-content.content
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero-content
+
+
+
+
+
+
+
+
+
+-- component content-q-a:
+caption question:
+body answer:
+
+-- ftd.column:
+width: fill-container
+margin-vertical.px: 24
+align-content: center
+
+-- ftd.text: $content-q-a.question
+role: $inherited.types.label-large
+text-align: center
+style: light
+
+-- ftd.text: 
+role: $inherited.types.label-large
+text-align: center
+style: light
+
+
+$content-q-a.answer
+
+-- end: ftd.column
+
+-- end: content-q-a
+
+
+
+
+
+
+
+
+
+-- component section-heading:
+caption title:
+optional body content:
+
+-- ftd.column:
+width: fill-container
+background.solid: #000000
+align-content: center
+padding-vertical.px: 96
+
+-- ftd.text: $section-heading.title
+role: $inherited.types.heading-medium
+color: #ffffff
+
+-- ftd.text: 
+if: { $section-heading.content != NULL }
+role: $inherited.types.label-large
+color: #ffffff
+
+$section-heading.content
+
+-- end: ftd.column
+
+-- end: section-heading
+
+
+
+
+
+
+
+
+
+-- component event-section:
+ftd.image-src pic:
+caption title:
+string text:
+body body:
+string button:
+string button-url:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.row:
+margin-vertical.px: 64
+margin-horizontal.px: 96
+align-content: center
+spacing.fixed.px: 96
+
+-- ftd.image:
+src: $event-section.pic
+height.fixed.px: 480
+
+-- ftd.column:
+align-self: center
+align-content: center
+spacing.fixed.px: 32
+width.fixed.px: 480
+
+-- ftd.text: $event-section.title
+role: $inherited.types.heading-small
+margin-bottom.px: 8
+
+-- ftd.text: $event-section.text
+role: $inherited.types.copy-large
+style: light
+
+-- ftd.text: $event-section.body
+role: $inherited.types.copy-small
+style: light
+text-align: center
+
+
+-- ftd.row:
+border-width.px: 1
+border-radius.px: 20
+border-color: #000000
+padding-vertical.px: 8
+width.fixed.px: 300
+align-content: center
+
+-- ftd.text: $event-section.button
+role: $inherited.types.label-large
+color: #000000
+link: $event-section.button-url
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: event-section
