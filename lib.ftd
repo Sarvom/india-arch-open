@@ -307,24 +307,39 @@ $content-q-a.answer
 
 -- component section-heading:
 caption title:
+optional string text:
 optional body content:
 
 -- ftd.column:
 width: fill-container
 background.solid: #000000
 align-content: center
-padding-vertical.px: 96
+padding-vertical.px: 64
+
+-- ftd.column:
+width.fixed.percent: 50
+align-content: center
+spacing.fixed.px: 16
 
 -- ftd.text: $section-heading.title
 role: $inherited.types.heading-medium
 color: #ffffff
 
+-- ftd.text: $section-heading.text
+if: { $section-heading.text != NULL }
+role: $inherited.types.label-large
+color: #ffffff
+
+
 -- ftd.text: 
 if: { $section-heading.content != NULL }
 role: $inherited.types.label-large
 color: #ffffff
+text-align: center
 
 $section-heading.content
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -345,6 +360,8 @@ string text:
 body body:
 string button:
 string button-url:
+boolean $is-active-1: false
+
 
 -- ftd.column:
 width: fill-container
@@ -387,11 +404,15 @@ border-color: #000000
 padding-vertical.px: 8
 width.fixed.px: 300
 align-content: center
+background.solid if {event-section.is-active-1}: #000000
+$on-mouse-enter$: $ftd.set-bool($a = $event-section.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $event-section.is-active-1, v = false)
+link: $event-section.button-url
 
 -- ftd.text: $event-section.button
 role: $inherited.types.label-large
 color: #000000
-link: $event-section.button-url
+color if {event-section.is-active-1}: #ffffff
 
 -- end: ftd.row
 
@@ -402,3 +423,251 @@ link: $event-section.button-url
 -- end: ftd.column
 
 -- end: event-section
+
+
+
+
+
+
+
+
+
+
+-- component event-section-2:
+ftd.image-src pic:
+caption title:
+string text:
+body body:
+string button:
+string button-url:
+boolean $is-active-1: false
+
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.row:
+margin-vertical.px: 64
+margin-horizontal.px: 96
+align-content: center
+spacing.fixed.px: 96
+
+-- ftd.column:
+align-self: center
+align-content: center
+spacing.fixed.px: 32
+width.fixed.px: 480
+
+-- ftd.text: $event-section-2.title
+role: $inherited.types.heading-small
+margin-bottom.px: 8
+
+-- ftd.text: $event-section-2.text
+role: $inherited.types.copy-large
+style: light
+
+-- ftd.text: $event-section-2.body
+role: $inherited.types.copy-small
+style: light
+text-align: center
+
+-- ftd.row:
+border-width.px: 1
+border-radius.px: 20
+border-color: #000000
+padding-vertical.px: 8
+width.fixed.px: 300
+align-content: center
+background.solid if {event-section-2.is-active-1}: #000000
+$on-mouse-enter$: $ftd.set-bool($a = $event-section-2.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $event-section-2.is-active-1, v = false)
+link: $event-section-2.button-url
+
+-- ftd.text: $event-section-2.button
+role: $inherited.types.label-large
+color: #000000
+color if {event-section-2.is-active-1}: #ffffff
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $event-section-2.pic
+height.fixed.px: 480
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: event-section-2
+
+
+
+
+
+
+
+
+
+-- component testimonial-content:
+body quote:
+string author:
+
+-- ftd.column:
+width: fill-container
+background.solid: #000000
+
+-- ftd.column:
+align-content: center
+margin-horizontal.px: 120
+margin-vertical.px: 96
+
+-- ftd.image:
+src: $assets.files.assets.quote.png
+height.fixed.px: 48
+margin-bottom.px: 64
+
+-- ftd.column:
+margin-horizontal.px: 180
+spacing.fixed.px: 32
+align-content: center
+
+-- ftd.text: $testimonial-content.quote
+role: $inherited.types.copy-small
+color: #ffffff
+text-align: center
+
+-- ftd.text: $testimonial-content.author
+role: $inherited.types.copy-large
+color: #ffffff
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: testimonial-content
+
+
+
+
+
+
+
+
+
+-- component contact:
+caption headline:
+ftd.image-src pic:
+body content:
+string cta-button-1:
+string cta-button-1-url:
+boolean $is-active-1: false
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+
+-- ftd.image: 
+src: $contact.pic
+width.fixed.percent: 50
+
+-- ftd.column:
+padding-horizontal.px: 100
+padding-vertical.px: 96
+align-content: center
+
+-- ftd.text: $contact.headline
+margin-bottom.px: 16
+role: $inherited.types.heading-medium
+
+-- ftd.text: $contact.content
+margin-bottom.px: 32
+role: $inherited.types.copy-regular
+text-align: center
+
+-- ftd.column:
+padding-bottom.px: 32
+border-bottom-width.px: 1
+border-bottom-color: $inherited.colors.border
+
+-- ftd.row:
+margin-bottom.px: 32
+
+-- ftd.column:
+margin-right.px: 8
+
+-- ftd.text-input:
+placeholder: Name
+padding-vertical.px: 4
+padding-horizontal.px: 8
+width: fill-container
+border-radius.px: 5
+border-width.px: 1
+border-color: $inherited.colors.border
+type: text
+role: $inherited.types.copy-small
+
+-- end: ftd.column
+
+-- ftd.column:
+margin-left.px: 8
+
+-- ftd.text-input:
+placeholder: Email
+padding-vertical.px: 4
+padding-horizontal.px: 8
+width: fill-container
+border-radius.px: 5
+border-width.px: 1
+border-color: $inherited.colors.border
+type: text
+role: $inherited.types.copy-small
+color: $inherited.colors.border
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text-input:
+placeholder: Type your message here...
+width: fill-container
+height.fixed.px: 150
+multiline: true
+padding-vertical.px: 4
+padding-horizontal.px: 8
+margin-bottom.px: 20
+border-radius.px: 5
+border-width.px: 1
+border-color: $inherited.colors.border
+type: text
+role: $inherited.types.copy-small
+color: $inherited.colors.border
+
+
+-- ftd.text: $contact.cta-button-1
+width: fill-container
+role: $inherited.types.label-large
+text-align: center
+align-self: center
+padding-vertical.px: 8
+padding-horizontal.px: 24
+border-radius.px: 1
+background.solid: #000000
+background.solid if {contact.is-active-1}: #333333
+$on-mouse-enter$: $ftd.set-bool($a = $contact.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact.is-active-1, v = false)
+color: #ffffff
+link: $contact.cta-button-1-url
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: contact
