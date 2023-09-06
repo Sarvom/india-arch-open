@@ -59,4 +59,29 @@ button-url: index.html
 Over the past few years we have successfully organised these events in various cities 
 across in India.
 
+-- lib.testimonial-content:
+author: Prachiti Kamath - Interior Design Student ( Mumbai Architecture Open 2020 Participant)
+
+Three Flaneurs gave us the exposure to explore and experience the varied buildings around 
+Mumbai. It was indeed a great opportunity for us as future interior designers to observe 
+and learn from the works of such well known firms & their iconic projects; through their 
+design process and also to see how they have developed the space into what it is at 
+present. It was an amazing experience!
+
+-- lib.contact: Contact Us
+pic: $assets.files.assets.image-3.webp
+cta-button-1: Submit
+cta-button-1-url: https://media.tenor.com/t7rftXtub88AAAAC/among-us.gif
+
+903 Nutan Yojana, 16th Road, Khar (West), Mumbai - 52, Maharashtra, INDIA
+
+info@threeflaneurs.com
+
+-- lib.section-heading: Who is organising?
+text: India Architecture Open is a series of public design events organised by the #ThreeFlaneurs.
+
+The #ThreeFlaneurs is a design and travel blog, which is the brainchild of three 
+architects who believe in the absolute importance of learning architecture through 
+experiencing it in person. Check them out by clicking HERE.
+
 -- end: lib.page
