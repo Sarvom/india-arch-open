@@ -1,5 +1,7 @@
 -- import: sarvom.github.io/india-arch-open/lib
 
+-- integer $current-active: 1
+
 -- lib.page:
 
 -- lib.navbar: India Architecture Open
@@ -59,7 +61,12 @@ button-url: index.html
 Over the past few years we have successfully organised these events in various cities 
 across in India.
 
+-- lib.carousel:
+$active-item: $current-active
+
 -- lib.testimonial-content:
+index: 1
+reset: $current-active
 author: Prachiti Kamath - Interior Design Student ( Mumbai Architecture Open 2020 Participant)
 
 Three Flaneurs gave us the exposure to explore and experience the varied buildings around 
@@ -67,6 +74,75 @@ Mumbai. It was indeed a great opportunity for us as future interior designers to
 and learn from the works of such well known firms & their iconic projects; through their 
 design process and also to see how they have developed the space into what it is at 
 present. It was an amazing experience!
+
+-- lib.testimonial-content:
+index: 2
+reset: $current-active
+author: Ketan Kamat (Mumbai Architecture Open 2020 Participant)
+
+After attending the Mumbai Architecture open over the past two days, I must say that the 
+Three Flaneurs are indeed doing commendable work for the Architectural profession. They are
+actually providing service to the architectural fraternity by grooming young minds with 
+exposure to varied building types and promoting good Architecture. I honestly feel 
+Architecture schools should encourage students to participate in these Architecture Opens.
+Thanking them once again and my Best wishes for many more of such events.
+
+-- lib.testimonial-content:
+index: 3
+reset: $current-active
+author: Sakshi Nanda (Mumbai Architecture Open 2020 Participant)
+
+I really appreciate the efforts that Three Flaneurs have taken to open up this iconic 
+architectural project for the masses. It makes Kala Ghoda worth visiting for us (architects). 
+I was wanting to visit the synagogue ever since I heard about it being restored, Three 
+Flaneurs gave a nice opportunity to visit it. Thank you!
+
+-- lib.testimonial-content:
+index: 4
+reset: $current-active
+author: Naimun Khan (Bengaluru Architecture Open 2018 Volunteer)
+
+A professionally arranged tour allowing you a peek into a good mix of humble projects..I 
+think experiences shared by architect firms and clients during the course of 
+conceptualizing, designing and building gives the tour a distinguished edge over the others.
+
+-- lib.testimonial-content:
+index: 5
+reset: $current-active
+author: Aksshit Popli (Delhi Architecture Open 2018 Participant)
+
+Hey, I am one of the students who attended the recently conducted events in Delhi. I 
+attended mulitple events that were planned and I'd really like to thank Three Flaneurs for 
+conducting such an amazing workshop. It was really fun, and I got to learn a lot. Kudos to 
+them for organizing such events and I'd be looking forward for the next time they conduct 
+such events. Thank you to the #ThreeFlaneurs!
+
+-- lib.testimonial-content:
+index: 6
+reset: $current-active
+author: Sanjay (Mumbai Architecture Open 2018 Participant)
+
+Lovely event - very engaging - waiting to attend more such in the future!
+
+-- lib.testimonial-content:
+index: 7
+reset: $current-active
+author: Alefiyah Lakdawala - Interior Design Student ( Mumbai Architecture Open 2020 Participant)
+
+As an interior design student, visits to well designed spaces is one of the best ways of 
+learning. The sessions curated by Three Flanuers gave students like me a great opportunity 
+to visit these spaces and interact with designers, giving us a glimpse of real world 
+challenges, conscious design planning and execution!
+
+-- lib.testimonial-content:
+index: 8
+reset: $current-active
+author: Vijay Kumar (Bengaluru Architecture Open 2018 Participant)
+
+This is a great initiative, it gave me a rare chance to interact with the architect at 
+his completed project and see an amazing private house!
+
+-- end: lib.carousel
 
 -- lib.contact: Contact Us
 pic: $assets.files.assets.image-3.webp

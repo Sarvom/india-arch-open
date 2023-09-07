@@ -1,3 +1,6 @@
+-- import: sarvom.github.io/india-arch-open/common
+-- import: sarvom.github.io/india-arch-open/assets
+
 -- component page:
 children c:
 
@@ -12,9 +15,25 @@ children: $page.c
 
 -- end: ftd.column
 
+-- footer: ©2023 by #ThreeFlaneurs
+icon-1: $assets.files.assets.fb.webp
+icon-2: $assets.files.assets.Instagram.webp
+icon-3: $assets.files.assets.web.webp
+icon-1-url: https://www.facebook.com/threeflaneurs
+icon-2-url: https://www.instagram.com/threeflaneurs/
+icon-3-url: https://www.threeflaneurs.com/
+
 -- end: ftd.column
 
 -- end: page
+
+
+
+
+
+
+
+
 
 
 -- component navbar:
@@ -203,6 +222,63 @@ role: $inherited.types.label-small
 -- end: ftd.row
 
 -- end: navbar-desktop
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+caption text:
+ftd.image-src icon-1:
+ftd.image-src icon-2:
+ftd.image-src icon-3:
+string icon-1-url:
+string icon-2-url:
+string icon-3-url:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+align-content: center
+padding-vertical.px: 36
+
+-- ftd.image:
+src: $footer.icon-1
+link: $footer.icon-1-url
+
+-- ftd.image:
+src: $footer.icon-2
+link: $footer.icon-2-url
+
+-- ftd.image:
+src: $footer.icon-3
+link: $footer.icon-3-url
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+background.solid: #000000
+align-content: center
+padding-vertical.px: 24
+
+-- ftd.text: $footer.text
+role: $inherited.types.copy-small
+color: #ffffff
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: footer
 
 
 
@@ -514,9 +590,14 @@ height.fixed.px: 480
 -- component testimonial-content:
 body quote:
 string author:
+optional integer index:
+optional integer reset:
 
 -- ftd.column:
+if: { testimonial-content.index == testimonial-content.reset }
 width: fill-container
+height.fixed.px: 400
+align-content: center
 background.solid: #000000
 
 -- ftd.column:
@@ -671,3 +752,123 @@ link: $contact.cta-button-1-url
 -- end: ftd.row
 
 -- end: contact
+
+
+
+
+
+
+
+
+
+
+-- component carousel:
+children wrap:
+integer $active-item:
+integer max: 8
+integer min: 1
+boolean small-height: false
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+align-content: center
+
+-- ftd.row:
+if: { ftd.device != "mobile" }
+width: fill-container
+padding-horizontal.px: 12
+align-content: center
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+padding-vertical.px: 40
+padding-horizontal.px: 12
+align-content: center
+
+-- ftd.image:
+if: { carousel.active-item != carousel.min }
+src: $assets.files.assets.left.png
+$on-click$: $common.decrement-and-clamp($a = $carousel.active-item, by = 1, min = $carousel.min, max = $carousel.max)
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.border
+anchor: parent
+left.px: 10
+top.px if { carousel.small-height }: 130
+z-index: 1000
+padding.px: 4
+
+-- ftd.image:
+if: { carousel.active-item == carousel.min }
+src: $assets.files.assets.left.png
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.border
+anchor: parent
+left.px: 10
+top.px if { carousel.small-height }: 130
+z-index: 1000
+padding.px: 4
+opacity: 0.5
+
+-- ftd.column:
+children: $carousel.wrap
+width: fill-container
+align-content: center
+padding-horizontal.px: 12
+z-index: 0
+
+-- end: ftd.column
+
+-- ftd.image:
+if: { carousel.active-item != carousel.max }
+src: $assets.files.assets.right.png
+$on-click$: $common.increment-and-clamp($a = $carousel.active-item, by = 1, min = $carousel.min, max = $carousel.max)
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.border
+right.px: 10
+top.px if { carousel.small-height }: 130
+anchor: parent
+z-index: 1000
+padding.px: 4
+
+-- ftd.image:
+if: { carousel.active-item == carousel.max }
+src: $assets.files.assets.right.png
+align-self: center
+border-radius.px: 100
+width.fixed.px: 40
+height.fixed.px: 40
+background.solid: $inherited.colors.border
+anchor: parent
+right.px: 10
+top.px if { carousel.small-height }: 130
+z-index: 1000
+padding.px: 4
+opacity: 0.5
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile"}
+children: $carousel.wrap
+width: fill-container
+padding-horizontal.px: 12
+padding-vertical.px: 2
+z-index: 0
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: carousel
