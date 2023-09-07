@@ -250,16 +250,13 @@ spacing.fixed.px: 24
 align-content: center
 padding-vertical.px: 36
 
--- ftd.image:
-src: $footer.icon-1
+-- ftd.image: $footer.icon-1
 link: $footer.icon-1-url
 
--- ftd.image:
-src: $footer.icon-2
+-- ftd.image: $footer.icon-2
 link: $footer.icon-2-url
 
--- ftd.image:
-src: $footer.icon-3
+-- ftd.image: $footer.icon-3
 link: $footer.icon-3-url
 
 -- end: ftd.row
