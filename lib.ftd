@@ -17,7 +17,7 @@ children: $page.c
 
 -- footer: ©2023 by #ThreeFlaneurs
 icon-1: $assets.files.assets.fb.webp
-icon-2: $assets.files.assets.instagram.webp
+icon-2: $assets.files.assets.Instagram.webp
 icon-3: $assets.files.assets.web.webp
 icon-1-url: https://www.facebook.com/threeflaneurs
 icon-2-url: https://www.instagram.com/threeflaneurs/
@@ -250,13 +250,16 @@ spacing.fixed.px: 24
 align-content: center
 padding-vertical.px: 36
 
--- ftd.image: $footer.icon-1
+-- ftd.image:
+src: $footer.icon-1
 link: $footer.icon-1-url
 
--- ftd.image: $footer.icon-2
+-- ftd.image:
+src: $footer.icon-2
 link: $footer.icon-2-url
 
--- ftd.image: $footer.icon-3
+-- ftd.image:
+src: $footer.icon-3
 link: $footer.icon-3-url
 
 -- end: ftd.row
