@@ -1,0 +1,474 @@
+-- import: fastn-community.github.io/expand-ds as ds
+-- import: sarvom.github.io/india-arch-open/lib
+
+
+-- integer $current-active: 1
+
+-- ds.page: India Arch Open Documentation
+site-logo: assets/logo.png
+
+-- ds.page.body:
+
+This document contains various components we have developed using `ftd`
+language.
+
+-- ds.h3: Navbar Component
+
+We have developed the `navbar` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.navbar: India Architecture Open
+cta-text-1: Home
+cta-text-1-url: index.html
+cta-text-2: Previous IAO Events
+cta-text-2-url: events
+cta-text-3: Press
+cta-text-3-url: index.html
+cta-text-4: Bengaluru Architecture Open
+cta-text-4-url: index.html
+
+-- ds.rendered.output:
+
+-- lib.navbar: India Architecture Open
+cta-text-1: Home
+cta-text-1-url: index.html
+cta-text-2: Previous IAO Events
+cta-text-2-url: events
+cta-text-3: Press
+cta-text-3-url: index.html
+cta-text-4: Bengaluru Architecture Open
+cta-text-4-url: index.html
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+-- ds.h3: Hero Component
+
+We have developed the `hero` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.hero: 
+pic: $assets.files.assets.hero-image.webp
+
+-- ds.rendered.output:
+
+-- lib.hero: 
+pic: $assets.files.assets.hero-image.webp
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+-- ds.h3: Hero-Content Component
+
+We have developed the `hero-content` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.hero-content: SHOWCASING OUTSTANDING CONTEMPORARY DESIGN
+
+
+\-- lib.content-q-a: What is the India Architecture Open?
+
+The India Architecture Open is a platform for - open house format - public design events 
+that aims to showcase outstanding contemporary architecture, interior, landscape and urban 
+design across multiple Indian cities. 
+
+\-- lib.content-q-a: Who can attend?
+
+All sections of the community are encouraged to participate in these events. Under this 
+initiative design curious individuals can sign up to explore and understand the value of 
+a well-designed built environment. 
+
+\-- lib.content-q-a: What can you expect?
+
+The participants would have an opportunity to get a guided tour of a project and the 
+possibility to engage with architect/designer/client in a meet and greet at the site. We 
+hope these events will lead to interesting discussions about the state of architecture in 
+our cities.
+
+\-- end: lib.hero-content
+
+-- ds.rendered.output:
+
+-- lib.hero-content: SHOWCASING OUTSTANDING CONTEMPORARY DESIGN
+
+
+-- lib.content-q-a: What is the India Architecture Open?
+
+The India Architecture Open is a platform for - open house format - public design events 
+that aims to showcase outstanding contemporary architecture, interior, landscape and urban 
+design across multiple Indian cities. 
+
+-- lib.content-q-a: Who can attend?
+
+All sections of the community are encouraged to participate in these events. Under this 
+initiative design curious individuals can sign up to explore and understand the value of 
+a well-designed built environment. 
+
+-- lib.content-q-a: What can you expect?
+
+The participants would have an opportunity to get a guided tour of a project and the 
+possibility to engage with architect/designer/client in a meet and greet at the site. We 
+hope these events will lead to interesting discussions about the state of architecture in 
+our cities.
+
+-- end: lib.hero-content
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+-- ds.h3: Events Component
+
+We have developed the `Events` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.section-secondary: Events
+
+
+-- ds.rendered.output:
+
+-- lib.section-secondary: Events
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+-- ds.h3: Events-Section Component
+
+We have developed the `Events-Section` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.event-section: Bengaluru Architecture Open
+text: 29th & 30th July 2023
+pic: $assets.files.assets.image-1.webp
+button: Click HERE to know more
+button-url: index.html
+
+Join us a we explore seven recently completed architecture & landscape projects across 
+Bengaluru.
+
+\-- lib.event-section: Previous India Architecture Open Events
+text: 2018 / 2019 / 2020
+pic: $assets.files.assets.image-2.webp
+button: Click HERE to know more
+button-url: index.html
+
+Over the past few years we have successfully organised these events in various cities 
+across in India.
+
+-- ds.rendered.output:
+
+-- lib.event-section: Bengaluru Architecture Open
+text: 29th & 30th July 2023
+pic: $assets.files.assets.image-1.webp
+button: Click HERE to know more
+button-url: index.html
+
+Join us a we explore seven recently completed architecture & landscape projects across 
+Bengaluru.
+
+-- lib.event-section: Previous India Architecture Open Events
+text: 2018 / 2019 / 2020
+pic: $assets.files.assets.image-2.webp
+button: Click HERE to know more
+button-url: index.html
+
+Over the past few years we have successfully organised these events in various cities 
+across in India.
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+-- ds.h3: Testimonial-Carousel Component
+
+We have developed the `Testimonial-Carousel` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.carousel:
+$active-item: $current-active
+
+\-- lib.testimonial-content:
+index: 1
+reset: $current-active
+author: Prachiti Kamath - Interior Design Student ( Mumbai Architecture Open 2020 Participant)
+
+Three Flaneurs gave us the exposure to explore and experience the varied buildings around 
+Mumbai. It was indeed a great opportunity for us as future interior designers to observe 
+and learn from the works of such well known firms & their iconic projects; through their 
+design process and also to see how they have developed the space into what it is at 
+present. It was an amazing experience!
+
+\-- lib.testimonial-content:
+index: 2
+reset: $current-active
+author: Ketan Kamat (Mumbai Architecture Open 2020 Participant)
+
+After attending the Mumbai Architecture open over the past two days, I must say that the 
+Three Flaneurs are indeed doing commendable work for the Architectural profession. They are
+actually providing service to the architectural fraternity by grooming young minds with 
+exposure to varied building types and promoting good Architecture. I honestly feel 
+Architecture schools should encourage students to participate in these Architecture Opens.
+Thanking them once again and my Best wishes for many more of such events.
+
+\-- lib.testimonial-content:
+index: 3
+reset: $current-active
+author: Sakshi Nanda (Mumbai Architecture Open 2020 Participant)
+
+I really appreciate the efforts that Three Flaneurs have taken to open up this iconic 
+architectural project for the masses. It makes Kala Ghoda worth visiting for us (architects). 
+I was wanting to visit the synagogue ever since I heard about it being restored, Three 
+Flaneurs gave a nice opportunity to visit it. Thank you!
+
+\-- lib.testimonial-content:
+index: 4
+reset: $current-active
+author: Naimun Khan (Bengaluru Architecture Open 2018 Volunteer)
+
+A professionally arranged tour allowing you a peek into a good mix of humble projects..I 
+think experiences shared by architect firms and clients during the course of 
+conceptualizing, designing and building gives the tour a distinguished edge over the others.
+
+\-- lib.testimonial-content:
+index: 5
+reset: $current-active
+author: Aksshit Popli (Delhi Architecture Open 2018 Participant)
+
+Hey, I am one of the students who attended the recently conducted events in Delhi. I 
+attended mulitple events that were planned and I'd really like to thank Three Flaneurs for 
+conducting such an amazing workshop. It was really fun, and I got to learn a lot. Kudos to 
+them for organizing such events and I'd be looking forward for the next time they conduct 
+such events. Thank you to the #ThreeFlaneurs!
+
+\-- lib.testimonial-content:
+index: 6
+reset: $current-active
+author: Sanjay (Mumbai Architecture Open 2018 Participant)
+
+Lovely event - very engaging - waiting to attend more such in the future!
+
+\-- lib.testimonial-content:
+index: 7
+reset: $current-active
+author: Alefiyah Lakdawala - Interior Design Student ( Mumbai Architecture Open 2020 Participant)
+
+As an interior design student, visits to well designed spaces is one of the best ways of 
+learning. The sessions curated by Three Flanuers gave students like me a great opportunity 
+to visit these spaces and interact with designers, giving us a glimpse of real world 
+challenges, conscious design planning and execution!
+
+\-- lib.testimonial-content:
+index: 8
+reset: $current-active
+author: Vijay Kumar (Bengaluru Architecture Open 2018 Participant)
+
+This is a great initiative, it gave me a rare chance to interact with the architect at 
+his completed project and see an amazing private house!
+
+\-- end: lib.carousel
+
+
+-- ds.rendered.output:
+
+-- lib.carousel:
+$active-item: $current-active
+
+-- lib.testimonial-content:
+index: 1
+reset: $current-active
+author: Prachiti Kamath - Interior Design Student ( Mumbai Architecture Open 2020 Participant)
+
+Three Flaneurs gave us the exposure to explore and experience the varied buildings around 
+Mumbai. It was indeed a great opportunity for us as future interior designers to observe 
+and learn from the works of such well known firms & their iconic projects; through their 
+design process and also to see how they have developed the space into what it is at 
+present. It was an amazing experience!
+
+-- lib.testimonial-content:
+index: 2
+reset: $current-active
+author: Ketan Kamat (Mumbai Architecture Open 2020 Participant)
+
+After attending the Mumbai Architecture open over the past two days, I must say that the 
+Three Flaneurs are indeed doing commendable work for the Architectural profession. They are
+actually providing service to the architectural fraternity by grooming young minds with 
+exposure to varied building types and promoting good Architecture. I honestly feel 
+Architecture schools should encourage students to participate in these Architecture Opens.
+Thanking them once again and my Best wishes for many more of such events.
+
+-- lib.testimonial-content:
+index: 3
+reset: $current-active
+author: Sakshi Nanda (Mumbai Architecture Open 2020 Participant)
+
+I really appreciate the efforts that Three Flaneurs have taken to open up this iconic 
+architectural project for the masses. It makes Kala Ghoda worth visiting for us (architects). 
+I was wanting to visit the synagogue ever since I heard about it being restored, Three 
+Flaneurs gave a nice opportunity to visit it. Thank you!
+
+-- lib.testimonial-content:
+index: 4
+reset: $current-active
+author: Naimun Khan (Bengaluru Architecture Open 2018 Volunteer)
+
+A professionally arranged tour allowing you a peek into a good mix of humble projects..I 
+think experiences shared by architect firms and clients during the course of 
+conceptualizing, designing and building gives the tour a distinguished edge over the others.
+
+-- lib.testimonial-content:
+index: 5
+reset: $current-active
+author: Aksshit Popli (Delhi Architecture Open 2018 Participant)
+
+Hey, I am one of the students who attended the recently conducted events in Delhi. I 
+attended mulitple events that were planned and I'd really like to thank Three Flaneurs for 
+conducting such an amazing workshop. It was really fun, and I got to learn a lot. Kudos to 
+them for organizing such events and I'd be looking forward for the next time they conduct 
+such events. Thank you to the #ThreeFlaneurs!
+
+-- lib.testimonial-content:
+index: 6
+reset: $current-active
+author: Sanjay (Mumbai Architecture Open 2018 Participant)
+
+Lovely event - very engaging - waiting to attend more such in the future!
+
+-- lib.testimonial-content:
+index: 7
+reset: $current-active
+author: Alefiyah Lakdawala - Interior Design Student ( Mumbai Architecture Open 2020 Participant)
+
+As an interior design student, visits to well designed spaces is one of the best ways of 
+learning. The sessions curated by Three Flanuers gave students like me a great opportunity 
+to visit these spaces and interact with designers, giving us a glimpse of real world 
+challenges, conscious design planning and execution!
+
+-- lib.testimonial-content:
+index: 8
+reset: $current-active
+author: Vijay Kumar (Bengaluru Architecture Open 2018 Participant)
+
+This is a great initiative, it gave me a rare chance to interact with the architect at 
+his completed project and see an amazing private house!
+
+-- end: lib.carousel
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+-- ds.h3: Events Component
+
+We have developed the `Events` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.section-secondary: Events
+
+
+-- ds.rendered.output:
+
+-- lib.contact: Contact Us
+pic: $assets.files.assets.image-3.webp
+cta-button-1: Submit
+cta-button-1-url: https://media.tenor.com/t7rftXtub88AAAAC/among-us.gif
+
+903 Nutan Yojana, 16th Road, Khar (West), Mumbai - 52, Maharashtra, INDIA
+
+info@threeflaneurs.com
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+-- ds.h3: Events Component
+
+We have developed the `Events` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.section-secondary: Events
+
+-- ds.rendered.output:
+
+-- lib.section-secondary: Who is organising?
+text: India Architecture Open is a series of public design events organised by the #ThreeFlaneurs.
+
+The #ThreeFlaneurs is a design and travel blog, which is the brainchild of three 
+architects who believe in the absolute importance of learning architecture through 
+experiencing it in person. Check them out by clicking HERE.
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+-- ds.h3: Events Component
+
+We have developed the `Events` component for beta crafts website.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- lib.section-secondary: Events
+
+-- ds.rendered.output:
+
+-- lib.footer: ©2023 by #ThreeFlaneurs
+icon-1: $assets.files.assets.fb.webp
+icon-2: $assets.files.assets.Instagram.webp
+icon-3: $assets.files.assets.web.webp
+icon-1-url: https://www.facebook.com/threeflaneurs
+icon-2-url: https://www.instagram.com/threeflaneurs/
+icon-3-url: https://www.threeflaneurs.com/
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
