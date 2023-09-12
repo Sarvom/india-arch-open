@@ -1,0 +1,85 @@
+-- import: sarvom.github.io/india-arch-open/lib
+
+-- lib.page:
+
+-- lib.event-section: Kozhikode Architecture Open 2020
+text: February, 2020
+pic: $assets.files.assets.image-4.webp
+button: More info about this event HERE
+button-url: index.html
+
+Our first event in Kerala - the Kozhikode Architecture Open was held over the weekend of 
+15th & 16th February.
+
+-- lib.event-section-2: Mumbai Architecture Open 2019
+text: February, 2019
+pic: $assets.files.assets.image-5.webp
+button: More info about this event HERE
+button-url: index.html
+
+The second Mumbai Architecture Open was held over the weekend of 9th and 10th February and 
+was once again organised in collaboration with the Urban Design and Architecture events of 
+the Kala Ghoda Arts Festival 2019.
+
+
+-- lib.event-section: Bengaluru Architecture Open 2019
+text: September, 2019
+pic: $assets.files.assets.image-6.webp
+button: More info about this event HERE
+button-url: index.html
+
+The Bengaluru Architecture Open was organized independently by #ThreeFlaneurs and was 
+successfully held over the weekend of 21st and 22nd September.
+
+-- lib.event-section-2: Mumbai Architecture Open 2020
+text: February, 2020
+pic: $assets.files.assets.image-7.webp
+button: More info about this event HERE
+button-url: index.html
+
+The third edition of the Mumbai Architecture Open was held over the weekend of 8th and 9th 
+February and was once again organised in collaboration with the Urban Design and 
+Architecture events of the Kala Ghoda Arts Festival.
+
+
+-- lib.event-section: Delhi Architecture Open 2018
+text: November, 2018
+pic: $assets.files.assets.image-8.webp
+button: More info about this event HERE
+button-url: index.html
+
+The Delhi Architecture Open was held over the weekend of 24th and 25th November. This event
+was organized by #ThreeFlaneurs in association with Domus India.
+
+
+-- lib.event-section-2: Pune Architecture Open 2018
+text: October, 2018
+pic: $assets.files.assets.image-9.webp
+button: More info about this event HERE
+button-url: index.html
+
+The Pune Architecture Open was organized independently by #ThreeFlaneurs and was 
+successfully held over the weekend of 6th and 7th October.
+
+
+-- lib.event-section: Bengaluru Architecture Open 2018
+text: March, 2018
+pic: $assets.files.assets.image-10.webp
+button: More info about this event HERE
+button-url: index.html
+
+The Bengaluru Architecture Open was organized independently by #ThreeFlaneurs and was 
+successfully held over the weekend of 24th and 25th March
+
+-- lib.event-section-2: Mumbai Architecture Open 2018
+text: February, 2018
+pic: $assets.files.assets.image-11.webp
+button: More info about this event HERE
+button-url: index.html
+
+The Mumbai Architecture Open was held over the weekend of 10th and 11th February and was 
+organised in cohorts with the Urban Design and Architecture events of the Kala Ghoda Arts 
+Festival 2018.
+
+
+-- end: lib.page

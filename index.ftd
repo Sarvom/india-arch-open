@@ -4,16 +4,6 @@
 
 -- lib.page:
 
--- lib.navbar: India Architecture Open
-cta-text-1: Home
-cta-text-1-url: index.html
-cta-text-2: Previous IAO Events
-cta-text-2-url: index.html
-cta-text-3: Press
-cta-text-3-url: index.html
-cta-text-4: Bengaluru Architecture Open
-cta-text-4-url: index.html
-
 -- lib.hero: 
 pic: $assets.files.assets.hero-image.webp
 
@@ -41,7 +31,7 @@ our cities.
 
 -- end: lib.hero-content
 
--- lib.section-heading: Events
+-- lib.section-secondary: Events
 
 -- lib.event-section: Bengaluru Architecture Open
 text: 29th & 30th July 2023
@@ -153,7 +143,7 @@ cta-button-1-url: https://media.tenor.com/t7rftXtub88AAAAC/among-us.gif
 
 info@threeflaneurs.com
 
--- lib.section-heading: Who is organising?
+-- lib.section-secondary: Who is organising?
 text: India Architecture Open is a series of public design events organised by the #ThreeFlaneurs.
 
 The #ThreeFlaneurs is a design and travel blog, which is the brainchild of three 

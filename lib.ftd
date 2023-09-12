@@ -7,7 +7,16 @@ children c:
 -- ftd.column:
 width: fill-container
 types: $roboto-typography.types
-;;colors: $fastn-cs-tail.main
+
+-- navbar: India Architecture Open
+cta-text-1: Home
+cta-text-1-url: index.html
+cta-text-2: Previous IAO Events
+cta-text-2-url: /events
+cta-text-3: Press
+cta-text-3-url: index.html
+cta-text-4: Bengaluru Architecture Open
+cta-text-4-url: index.html
 
 -- ftd.column:
 width: fill-container
@@ -299,6 +308,7 @@ border-width.percent: 20
 border-color: #ffffff
 
 -- ftd.image:
+width if { ftd.device == "mobile" } : fill-container
 src: $hero.pic
 ;;width: fill-container
 align-self: center
@@ -324,13 +334,18 @@ optional body body:
 -- ftd.column:
 width: fill-container
 align-content: center
-margin-vertical.px: 96
+margin-vertical.px if { ftd.device == "desktop" }: 96
+margin-vertical.px if { ftd.device == "mobile" }: 24
+
 
 -- ftd.text: $hero-content.title
 role: $inherited.types.heading-small
+color: #000000
+text-align: center
 
 -- ftd.column:
-margin-horizontal.px: 200
+margin-horizontal.px if { ftd.device == "desktop" }: 200
+margin-horizontal.px if { ftd.device == "mobile" }: 20
 children: $hero-content.content
 
 -- end: ftd.column
@@ -366,7 +381,6 @@ role: $inherited.types.label-large
 text-align: center
 style: light
 
-
 $content-q-a.answer
 
 -- end: ftd.column
@@ -381,7 +395,7 @@ $content-q-a.answer
 
 
 
--- component section-heading:
+-- component section-secondary:
 caption title:
 optional string text:
 optional body content:
@@ -390,36 +404,40 @@ optional body content:
 width: fill-container
 background.solid: #000000
 align-content: center
-padding-vertical.px: 64
+padding-vertical.px if { ftd.device == "desktop" }: 64
+padding-vertical.px if { ftd.device == "mobile" }: 32
 
 -- ftd.column:
-width.fixed.percent: 50
+width.fixed.percent if { ftd.device == "desktop" }: 50
+width.fixed.percent if { ftd.device == "mobile" }: 80
 align-content: center
 spacing.fixed.px: 16
 
--- ftd.text: $section-heading.title
+-- ftd.text: $section-secondary.title
 role: $inherited.types.heading-medium
 color: #ffffff
+text-align: center
 
--- ftd.text: $section-heading.text
-if: { $section-heading.text != NULL }
-role: $inherited.types.label-large
-color: #ffffff
-
-
--- ftd.text: 
-if: { $section-heading.content != NULL }
+-- ftd.text: $section-secondary.text
+if: { $section-secondary.text != NULL }
 role: $inherited.types.label-large
 color: #ffffff
 text-align: center
 
-$section-heading.content
+
+-- ftd.text: 
+if: { $section-secondary.content != NULL }
+role: $inherited.types.label-large
+color: #ffffff
+text-align: center
+
+$section-secondary.content
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: section-heading
+-- end: section-secondary
 
 
 
@@ -444,8 +462,9 @@ width: fill-container
 align-content: center
 
 -- ftd.row:
+if: { ftd.device == "desktop"}
 margin-vertical.px: 64
-margin-horizontal.px: 96
+margin-horizontal.px : 96
 align-content: center
 spacing.fixed.px: 96
 
@@ -496,6 +515,62 @@ color if {event-section.is-active-1}: #ffffff
 
 -- end: ftd.row
 
+
+
+-- ftd.column:
+if: { ftd.device == "mobile"}
+margin-vertical.px: 32
+align-content: center
+
+-- ftd.image:
+src: $event-section.pic
+height.fixed.px: 480
+width.fixed.percent: 80
+
+-- ftd.column:
+align-self: center
+align-content: center
+spacing.fixed.px: 32
+
+-- ftd.text: $event-section.title
+role: $inherited.types.heading-small
+margin-bottom.px: 8
+text-align: center
+
+-- ftd.text: $event-section.text
+role: $inherited.types.copy-large
+style: light
+text-align: center
+
+-- ftd.text: $event-section.body
+role: $inherited.types.copy-small
+style: light
+text-align: center
+
+
+-- ftd.row:
+border-width.px: 1
+border-radius.px: 20
+border-color: #000000
+padding-vertical.px: 8
+width.fixed.px: 300
+align-content: center
+background.solid if {event-section.is-active-1}: #000000
+$on-mouse-enter$: $ftd.set-bool($a = $event-section.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $event-section.is-active-1, v = false)
+link: $event-section.button-url
+
+-- ftd.text: $event-section.button
+role: $inherited.types.label-large
+color: #000000
+color if {event-section.is-active-1}: #ffffff
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
 -- end: ftd.column
 
 -- end: event-section
@@ -524,8 +599,9 @@ width: fill-container
 align-content: center
 
 -- ftd.row:
+if: { ftd.device == "desktop"}
 margin-vertical.px: 64
-margin-horizontal.px: 96
+margin-horizontal.px : 96
 align-content: center
 spacing.fixed.px: 96
 
@@ -547,6 +623,7 @@ style: light
 role: $inherited.types.copy-small
 style: light
 text-align: center
+
 
 -- ftd.row:
 border-width.px: 1
@@ -575,63 +652,65 @@ height.fixed.px: 480
 
 -- end: ftd.row
 
+
+
+-- ftd.column:
+if: { ftd.device == "mobile"}
+margin-vertical.px: 32
+align-content: center
+
+-- ftd.image:
+src: $event-section-2.pic
+height.fixed.px: 480
+width.fixed.percent: 80
+
+-- ftd.column:
+align-self: center
+align-content: center
+spacing.fixed.px: 32
+
+-- ftd.text: $event-section-2.title
+role: $inherited.types.heading-small
+margin-bottom.px: 8
+text-align: center
+
+-- ftd.text: $event-section-2.text
+role: $inherited.types.copy-large
+style: light
+text-align: center
+
+-- ftd.text: $event-section-2.body
+role: $inherited.types.copy-small
+style: light
+text-align: center
+
+
+-- ftd.row:
+border-width.px: 1
+border-radius.px: 20
+border-color: #000000
+padding-vertical.px: 8
+width.fixed.px: 300
+align-content: center
+background.solid if {event-section-2.is-active-1}: #000000
+$on-mouse-enter$: $ftd.set-bool($a = $event-section-2.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $event-section-2.is-active-1, v = false)
+link: $event-section-2.button-url
+
+-- ftd.text: $event-section-2.button
+role: $inherited.types.label-large
+color: #000000
+color if {event-section-2.is-active-1}: #ffffff
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
 -- end: ftd.column
 
 -- end: event-section-2
-
-
-
-
-
-
-
-
-
--- component testimonial-content:
-body quote:
-string author:
-optional integer index:
-optional integer reset:
-
--- ftd.column:
-if: { testimonial-content.index == testimonial-content.reset }
-width: fill-container
-height.fixed.px: 400
-align-content: center
-background.solid: #000000
-
--- ftd.column:
-align-content: center
-margin-horizontal.px: 120
-margin-vertical.px: 96
-
--- ftd.image:
-src: $assets.files.assets.quote.png
-height.fixed.px: 48
-margin-bottom.px: 64
-
--- ftd.column:
-margin-horizontal.px: 180
-spacing.fixed.px: 32
-align-content: center
-
--- ftd.text: $testimonial-content.quote
-role: $inherited.types.copy-small
-color: #ffffff
-text-align: center
-
--- ftd.text: $testimonial-content.author
-role: $inherited.types.copy-large
-color: #ffffff
-text-align: center
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: testimonial-content
 
 
 
@@ -649,12 +728,174 @@ string cta-button-1:
 string cta-button-1-url:
 boolean $is-active-1: false
 
+-- ftd.column:
+width: fill-container
+
+-- contact-mobile:
+if: { ftd.device == "mobile"}
+headline: $contact.headline
+pic: $contact.pic
+cta-button-1: $contact.cta-button-1
+cta-button-1-url: $contact.cta-button-1-url
+content: $contact.content
+
+-- contact-desktop:
+if: { ftd.device == "desktop"}
+headline: $contact.headline
+pic: $contact.pic
+cta-button-1: $contact.cta-button-1
+cta-button-1-url: $contact.cta-button-1-url
+content: $contact.content
+
+-- end: ftd.column
+
+-- end: contact
+
+
+
+
+
+
+
+
+
+
+-- component contact-mobile:
+caption headline:
+ftd.image-src pic:
+body content:
+string cta-button-1:
+string cta-button-1-url:
+boolean $is-active-1: false
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+
+-- ftd.column:
+padding-horizontal.px: 24
+margin-vertical.px: 32
+align-content: center
+
+-- ftd.text: $contact-mobile.headline
+margin-bottom.px: 16
+role: $inherited.types.heading-medium
+
+-- ftd.text: $contact-mobile.content
+margin-bottom.px: 32
+role: $inherited.types.copy-regular
+text-align: center
+
+-- ftd.column:
+padding-bottom.px: 32
+border-bottom-width.px: 1
+border-bottom-color: $inherited.colors.border
+
+-- ftd.row:
+margin-bottom.px: 16
+
+-- ftd.column:
+margin-right.px: 8
+
+-- ftd.text-input:
+placeholder: Name
+padding-vertical.px: 4
+padding-horizontal.px: 8
+width: fill-container
+border-radius.px: 5
+border-width.px: 1
+border-color: $inherited.colors.border
+type: text
+role: $inherited.types.copy-small
+
+-- end: ftd.column
+
+-- ftd.column:
+margin-left.px: 8
+
+-- ftd.text-input:
+placeholder: Email
+padding-vertical.px: 4
+padding-horizontal.px: 8
+width: fill-container
+border-radius.px: 5
+border-width.px: 1
+border-color: $inherited.colors.border
+type: text
+role: $inherited.types.copy-small
+color: $inherited.colors.border
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.text-input:
+placeholder: Type your message here...
+width: fill-container
+height.fixed.px: 150
+multiline: true
+padding-vertical.px: 4
+padding-horizontal.px: 8
+margin-bottom.px: 20
+border-radius.px: 5
+border-width.px: 1
+border-color: $inherited.colors.border
+type: text
+role: $inherited.types.copy-small
+color: $inherited.colors.border
+
+
+-- ftd.text: $contact-mobile.cta-button-1
+width: fill-container
+role: $inherited.types.label-large
+text-align: center
+align-self: center
+padding-vertical.px: 8
+padding-horizontal.px: 24
+border-radius.px: 1
+background.solid: #000000
+background.solid if {contact-mobile.is-active-1}: #333333
+$on-mouse-enter$: $ftd.set-bool($a = $contact-mobile.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-mobile.is-active-1, v = false)
+color: #ffffff
+link: $contact-mobile.cta-button-1-url
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.image: 
+src: $contact-mobile.pic
+width.fixed.percent: 100
+align-self: center
+
+-- end: ftd.column
+
+-- end: contact-mobile
+
+
+
+
+
+
+
+
+
+
+-- component contact-desktop:
+caption headline:
+ftd.image-src pic:
+body content:
+string cta-button-1:
+string cta-button-1-url:
+boolean $is-active-1: false
+
 -- ftd.row:
 width: fill-container
 height: hug-content
 
 -- ftd.image: 
-src: $contact.pic
+src: $contact-desktop.pic
 width.fixed.percent: 50
 
 -- ftd.column:
@@ -662,11 +903,11 @@ padding-horizontal.px: 100
 padding-vertical.px: 96
 align-content: center
 
--- ftd.text: $contact.headline
+-- ftd.text: $contact-desktop.headline
 margin-bottom.px: 16
 role: $inherited.types.heading-medium
 
--- ftd.text: $contact.content
+-- ftd.text: $contact-desktop.content
 margin-bottom.px: 32
 role: $inherited.types.copy-regular
 text-align: center
@@ -730,7 +971,7 @@ role: $inherited.types.copy-small
 color: $inherited.colors.border
 
 
--- ftd.text: $contact.cta-button-1
+-- ftd.text: $contact-desktop.cta-button-1
 width: fill-container
 role: $inherited.types.label-large
 text-align: center
@@ -739,11 +980,11 @@ padding-vertical.px: 8
 padding-horizontal.px: 24
 border-radius.px: 1
 background.solid: #000000
-background.solid if {contact.is-active-1}: #333333
-$on-mouse-enter$: $ftd.set-bool($a = $contact.is-active-1, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $contact.is-active-1, v = false)
+background.solid if {contact-desktop.is-active-1}: #333333
+$on-mouse-enter$: $ftd.set-bool($a = $contact-desktop.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-desktop.is-active-1, v = false)
 color: #ffffff
-link: $contact.cta-button-1-url
+link: $contact-desktop.cta-button-1-url
 
 -- end: ftd.column
 
@@ -751,7 +992,7 @@ link: $contact.cta-button-1-url
 
 -- end: ftd.row
 
--- end: contact
+-- end: contact-desktop
 
 
 
@@ -775,7 +1016,7 @@ background.solid: $inherited.colors.background.step-1
 align-content: center
 
 -- ftd.row:
-if: { ftd.device != "mobile" }
+if: { ftd.device == "desktop" }
 width: fill-container
 padding-horizontal.px: 12
 align-content: center
@@ -872,3 +1113,62 @@ z-index: 0
 -- end: ftd.column
 
 -- end: carousel
+
+
+
+
+
+
+
+
+
+
+-- component testimonial-content:
+body quote:
+string author:
+optional integer index:
+optional integer reset:
+
+-- ftd.column:
+if: { testimonial-content.index == testimonial-content.reset }
+width: fill-container
+height.fixed.px if { ftd.device == "desktop" }: 400
+align-content: center
+
+-- ftd.column:
+align-content: center
+margin-horizontal.px if { ftd.device == "desktop" }: 120
+margin-horizontal.px if { ftd.device == "mobile" }: 24
+margin-vertical.px if { ftd.device == "desktop" }: 96
+margin-vertical.px if { ftd.device == "mobile" }: 32
+
+
+-- ftd.image:
+src: $assets.files.assets.quote.png
+height.fixed.px: 48
+margin-bottom.px if { ftd.device == "desktop" }: 64
+margin-bottom.px if { ftd.device == "mobile" }: 24
+
+
+-- ftd.column:
+margin-horizontal.px if { ftd.device == "desktop" }: 180
+spacing.fixed.px: 32
+align-content: center
+
+-- ftd.text: $testimonial-content.quote
+role: $inherited.types.copy-small
+color: #ffffff
+text-align: center
+
+-- ftd.text: $testimonial-content.author
+role: $inherited.types.copy-large
+color: #ffffff
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: testimonial-content
