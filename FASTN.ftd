@@ -4,6 +4,7 @@
 favicon: /-/sarvom.github.io/india-arch-open/favicon.ico
 
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
+-- fastn.dependency: fastn-community.github.io/expand-ds
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
 

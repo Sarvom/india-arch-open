@@ -1,5 +1,7 @@
 -- import: sarvom.github.io/india-arch-open/common
 -- import: sarvom.github.io/india-arch-open/assets
+-- import: sarvom.github.io/india-arch-open/colors as colors
+
 
 -- component page:
 children c:
@@ -7,6 +9,7 @@ children c:
 -- ftd.column:
 width: fill-container
 types: $roboto-typography.types
+background.solid: $colors.base-
 
 -- navbar: India Architecture Open
 cta-text-1: Home
@@ -112,7 +115,7 @@ boolean $open: false
 
 -- ftd.column:
 width: fill-container
-background.solid: #000000
+background.solid: $colors.step-1-
 
 
 -- ftd.row:
@@ -122,7 +125,7 @@ padding-horizontal.px: 8
 spacing: space-around
 
 -- ftd.text: $navbar-mobile.title
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.heading-small
 
 -- ftd.image:
@@ -147,22 +150,22 @@ spacing.fixed.px: 16
 
 -- ftd.text: $navbar-mobile.cta-text-1
 link: $navbar-mobile.cta-text-1-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- ftd.text: $navbar-mobile.cta-text-2
 link: $navbar-mobile.cta-text-2-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- ftd.text: $navbar-mobile.cta-text-3
 link: $navbar-mobile.cta-text-3-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- ftd.text: $navbar-mobile.cta-text-4
 link: $navbar-mobile.cta-text-4-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- end: ftd.column
@@ -191,7 +194,7 @@ string cta-text-4:
 string cta-text-4-url:
 
 -- ftd.row:
-background.solid: #000000
+background.solid: $colors.step-1-
 width: fill-container
 height: hug-content
 padding-vertical.px: 32
@@ -199,7 +202,7 @@ padding-horizontal.percent: 5
 spacing: space-between
 
 -- ftd.text: $navbar-desktop.title
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.heading-small
 
 -- ftd.row:
@@ -208,22 +211,22 @@ align-self: center
 
 -- ftd.text: $navbar-desktop.cta-text-1
 link: $navbar-desktop.cta-text-1-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- ftd.text: $navbar-desktop.cta-text-2
 link: $navbar-desktop.cta-text-2-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- ftd.text: $navbar-desktop.cta-text-3
 link: $navbar-desktop.cta-text-3-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- ftd.text: $navbar-desktop.cta-text-4
 link: $navbar-desktop.cta-text-4-url
-color: #ffffff
+color: $colors.cta-primary-text-
 role: $inherited.types.label-small
 
 -- end: ftd.row
@@ -275,13 +278,13 @@ link: $footer.icon-3-url
 
 -- ftd.row:
 width: fill-container
-background.solid: #000000
+background.solid: $colors.step-1-
 align-content: center
 padding-vertical.px: 24
 
 -- ftd.text: $footer.text
 role: $inherited.types.copy-small
-color: #ffffff
+color: $colors.cta-primary-text-
 
 -- end: ftd.row
 
@@ -303,15 +306,24 @@ ftd.image-src pic:
 
 -- ftd.column: 
 width: fill-container
-margin-top.px: 64
-border-width.percent: 20
-border-color: #ffffff
+
+-- ftd.row:
+width: fill-container
+border-width.px: 40
+border-color: $colors.border-strong-
+z-index: 9999
+height.fixed.vh: 100
+
+-- end: ftd.row
 
 -- ftd.image:
-width if { ftd.device == "mobile" } : fill-container
+;;width if { ftd.device == "mobile" } : fill-container
+;;width if { ftd.device == "desktop" } : auto
 src: $hero.pic
-;;width: fill-container
+width: fill-container
 align-self: center
+z-index: 1
+anchor: parent
 
 -- end: ftd.column
 
@@ -340,7 +352,7 @@ margin-vertical.px if { ftd.device == "mobile" }: 24
 
 -- ftd.text: $hero-content.title
 role: $inherited.types.heading-small
-color: #000000
+color: $colors.text-
 text-align: center
 
 -- ftd.column:
@@ -373,11 +385,13 @@ align-content: center
 
 -- ftd.text: $content-q-a.question
 role: $inherited.types.label-large
+color: $colors.text-
 text-align: center
 style: light
 
 -- ftd.text: 
 role: $inherited.types.label-large
+color: $colors.text-
 text-align: center
 style: light
 
@@ -402,7 +416,7 @@ optional body content:
 
 -- ftd.column:
 width: fill-container
-background.solid: #000000
+background.solid: $colors.step-1-
 align-content: center
 padding-vertical.px if { ftd.device == "desktop" }: 64
 padding-vertical.px if { ftd.device == "mobile" }: 32
@@ -415,20 +429,20 @@ spacing.fixed.px: 16
 
 -- ftd.text: $section-secondary.title
 role: $inherited.types.heading-medium
-color: #ffffff
+color: $colors.cta-primary-text-
 text-align: center
 
 -- ftd.text: $section-secondary.text
 if: { $section-secondary.text != NULL }
 role: $inherited.types.label-large
-color: #ffffff
+color: $colors.cta-primary-text-
 text-align: center
 
 
 -- ftd.text: 
 if: { $section-secondary.content != NULL }
 role: $inherited.types.label-large
-color: #ffffff
+color: $colors.cta-primary-text-
 text-align: center
 
 $section-secondary.content
@@ -467,6 +481,7 @@ margin-vertical.px: 64
 margin-horizontal.px : 96
 align-content: center
 spacing.fixed.px: 96
+wrap: true
 
 -- ftd.image:
 src: $event-section.pic
@@ -480,14 +495,17 @@ width.fixed.px: 480
 
 -- ftd.text: $event-section.title
 role: $inherited.types.heading-small
+color: $colors.text-
 margin-bottom.px: 8
 
 -- ftd.text: $event-section.text
 role: $inherited.types.copy-large
+color: $colors.text-
 style: light
 
 -- ftd.text: $event-section.body
 role: $inherited.types.copy-small
+color: $colors.text-
 style: light
 text-align: center
 
@@ -495,19 +513,19 @@ text-align: center
 -- ftd.row:
 border-width.px: 1
 border-radius.px: 20
-border-color: #000000
+border-color: $colors.step-1-
 padding-vertical.px: 8
 width.fixed.px: 300
 align-content: center
-background.solid if {event-section.is-active-1}: #000000
+background.solid if {event-section.is-active-1}: $colors.step-1-
 $on-mouse-enter$: $ftd.set-bool($a = $event-section.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $event-section.is-active-1, v = false)
 link: $event-section.button-url
 
 -- ftd.text: $event-section.button
 role: $inherited.types.label-large
-color: #000000
-color if {event-section.is-active-1}: #ffffff
+color: $colors.text-
+color if {event-section.is-active-1}: $colors.cta-primary-text-
 
 -- end: ftd.row
 
@@ -534,6 +552,7 @@ spacing.fixed.px: 32
 
 -- ftd.text: $event-section.title
 role: $inherited.types.heading-small
+color: $colors.text-
 margin-bottom.px: 8
 text-align: center
 
@@ -541,29 +560,32 @@ text-align: center
 role: $inherited.types.copy-large
 style: light
 text-align: center
+color: $colors.text-
+
 
 -- ftd.text: $event-section.body
 role: $inherited.types.copy-small
 style: light
 text-align: center
+color: $colors.text-
 
 
 -- ftd.row:
 border-width.px: 1
 border-radius.px: 20
-border-color: #000000
+border-color: $colors.text-
 padding-vertical.px: 8
 width.fixed.px: 300
 align-content: center
-background.solid if {event-section.is-active-1}: #000000
+background.solid if {event-section.is-active-1}: $colors.step-1-
 $on-mouse-enter$: $ftd.set-bool($a = $event-section.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $event-section.is-active-1, v = false)
 link: $event-section.button-url
 
 -- ftd.text: $event-section.button
 role: $inherited.types.label-large
-color: #000000
-color if {event-section.is-active-1}: #ffffff
+color: $colors.text-
+color if {event-section.is-active-1}: $colors.cta-primary-text-
 
 -- end: ftd.row
 
@@ -604,6 +626,7 @@ margin-vertical.px: 64
 margin-horizontal.px : 96
 align-content: center
 spacing.fixed.px: 96
+wrap: true
 
 -- ftd.column:
 align-self: center
@@ -614,33 +637,36 @@ width.fixed.px: 480
 -- ftd.text: $event-section-2.title
 role: $inherited.types.heading-small
 margin-bottom.px: 8
+color: $colors.text-
 
 -- ftd.text: $event-section-2.text
 role: $inherited.types.copy-large
 style: light
+color: $colors.text-
 
 -- ftd.text: $event-section-2.body
 role: $inherited.types.copy-small
 style: light
 text-align: center
+color: $colors.text-
 
 
 -- ftd.row:
 border-width.px: 1
 border-radius.px: 20
-border-color: #000000
+border-color: $colors.step-1-
 padding-vertical.px: 8
 width.fixed.px: 300
 align-content: center
-background.solid if {event-section-2.is-active-1}: #000000
+background.solid if {event-section-2.is-active-1}: $colors.step-1-
 $on-mouse-enter$: $ftd.set-bool($a = $event-section-2.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $event-section-2.is-active-1, v = false)
 link: $event-section-2.button-url
 
 -- ftd.text: $event-section-2.button
 role: $inherited.types.label-large
-color: #000000
-color if {event-section-2.is-active-1}: #ffffff
+color: $colors.text-
+color if {event-section-2.is-active-1}: $colors.cta-primary-text-
 
 -- end: ftd.row
 
@@ -673,34 +699,37 @@ spacing.fixed.px: 32
 role: $inherited.types.heading-small
 margin-bottom.px: 8
 text-align: center
+color: $colors.text-
 
 -- ftd.text: $event-section-2.text
 role: $inherited.types.copy-large
 style: light
 text-align: center
+color: $colors.text-
 
 -- ftd.text: $event-section-2.body
 role: $inherited.types.copy-small
 style: light
 text-align: center
+color: $colors.text-
 
 
 -- ftd.row:
 border-width.px: 1
 border-radius.px: 20
-border-color: #000000
+border-color: $colors.step-1-
 padding-vertical.px: 8
 width.fixed.px: 300
 align-content: center
-background.solid if {event-section-2.is-active-1}: #000000
+background.solid if {event-section-2.is-active-1}: $colors.step-1-
 $on-mouse-enter$: $ftd.set-bool($a = $event-section-2.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $event-section-2.is-active-1, v = false)
 link: $event-section-2.button-url
 
 -- ftd.text: $event-section-2.button
 role: $inherited.types.label-large
-color: #000000
-color if {event-section-2.is-active-1}: #ffffff
+color: $colors.text-
+color if {event-section-2.is-active-1}: $colors.cta-primary-text-
 
 -- end: ftd.row
 
@@ -780,11 +809,13 @@ align-content: center
 -- ftd.text: $contact-mobile.headline
 margin-bottom.px: 16
 role: $inherited.types.heading-medium
+color: $colors.text-
 
 -- ftd.text: $contact-mobile.content
 margin-bottom.px: 32
 role: $inherited.types.copy-regular
 text-align: center
+color: $colors.text-
 
 -- ftd.column:
 padding-bottom.px: 32
@@ -807,6 +838,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 type: text
 role: $inherited.types.copy-small
+color: $colors.text-
 
 -- end: ftd.column
 
@@ -823,7 +855,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 type: text
 role: $inherited.types.copy-small
-color: $inherited.colors.border
+color: $colors.text-
 
 -- end: ftd.column
 
@@ -842,7 +874,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 type: text
 role: $inherited.types.copy-small
-color: $inherited.colors.border
+color: $colors.text-
 
 
 -- ftd.text: $contact-mobile.cta-button-1
@@ -853,11 +885,11 @@ align-self: center
 padding-vertical.px: 8
 padding-horizontal.px: 24
 border-radius.px: 1
-background.solid: #000000
+background.solid: $colors.step-1-
 background.solid if {contact-mobile.is-active-1}: #333333
 $on-mouse-enter$: $ftd.set-bool($a = $contact-mobile.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-mobile.is-active-1, v = false)
-color: #ffffff
+color: $colors.cta-primary-text-
 link: $contact-mobile.cta-button-1-url
 
 -- end: ftd.column
@@ -893,6 +925,7 @@ boolean $is-active-1: false
 -- ftd.row:
 width: fill-container
 height: hug-content
+wrap: true
 
 -- ftd.image: 
 src: $contact-desktop.pic
@@ -906,11 +939,13 @@ align-content: center
 -- ftd.text: $contact-desktop.headline
 margin-bottom.px: 16
 role: $inherited.types.heading-medium
+color: $colors.text-
 
 -- ftd.text: $contact-desktop.content
 margin-bottom.px: 32
 role: $inherited.types.copy-regular
 text-align: center
+color: $colors.text-
 
 -- ftd.column:
 padding-bottom.px: 32
@@ -933,6 +968,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 type: text
 role: $inherited.types.copy-small
+color: $colors.text-
 
 -- end: ftd.column
 
@@ -949,7 +985,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 type: text
 role: $inherited.types.copy-small
-color: $inherited.colors.border
+color: $colors.text-
 
 -- end: ftd.column
 
@@ -968,7 +1004,7 @@ border-width.px: 1
 border-color: $inherited.colors.border
 type: text
 role: $inherited.types.copy-small
-color: $inherited.colors.border
+color: $colors.text-
 
 
 -- ftd.text: $contact-desktop.cta-button-1
@@ -979,11 +1015,11 @@ align-self: center
 padding-vertical.px: 8
 padding-horizontal.px: 24
 border-radius.px: 1
-background.solid: #000000
+background.solid: $colors.step-1-
 background.solid if {contact-desktop.is-active-1}: #333333
 $on-mouse-enter$: $ftd.set-bool($a = $contact-desktop.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-desktop.is-active-1, v = false)
-color: #ffffff
+color: $colors.cta-primary-text-
 link: $contact-desktop.cta-button-1-url
 
 -- end: ftd.column
@@ -1012,7 +1048,7 @@ boolean small-height: false
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.background.step-1
+background.solid: $colors.step-1-
 align-content: center
 
 -- ftd.row:
@@ -1132,14 +1168,13 @@ optional integer reset:
 -- ftd.column:
 if: { testimonial-content.index == testimonial-content.reset }
 width: fill-container
-height.fixed.px if { ftd.device == "desktop" }: 400
+min-height.fixed.px if { ftd.device == "desktop" }: 400
 align-content: center
 
 -- ftd.column:
 align-content: center
-margin-horizontal.px if { ftd.device == "desktop" }: 120
+margin-vertical.vh if { ftd.device == "desktop" }: 10
 margin-horizontal.px if { ftd.device == "mobile" }: 24
-margin-vertical.px if { ftd.device == "desktop" }: 96
 margin-vertical.px if { ftd.device == "mobile" }: 32
 
 
@@ -1151,18 +1186,18 @@ margin-bottom.px if { ftd.device == "mobile" }: 24
 
 
 -- ftd.column:
-margin-horizontal.px if { ftd.device == "desktop" }: 180
+margin-horizontal.vw if { ftd.device == "desktop" }: 12.5
 spacing.fixed.px: 32
 align-content: center
 
 -- ftd.text: $testimonial-content.quote
 role: $inherited.types.copy-small
-color: #ffffff
+color: $colors.cta-primary-text-
 text-align: center
 
 -- ftd.text: $testimonial-content.author
 role: $inherited.types.copy-large
-color: #ffffff
+color: $colors.cta-primary-text-
 text-align: center
 
 -- end: ftd.column
