@@ -12,7 +12,7 @@ types: $roboto-typography.types
 cta-text-1: Home
 cta-text-1-url: index.html
 cta-text-2: Previous IAO Events
-cta-text-2-url: /events
+cta-text-2-url: events
 cta-text-3: Press
 cta-text-3-url: index.html
 cta-text-4: Bengaluru Architecture Open
